@@ -3,13 +3,16 @@ name: Teste de Resposta de Permutacoes Automatico
 on:
   push:
     branches: [ "main" ]
+
+permissions:
+  contents: read
     
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - name: Check Files
-    - uses: actions/checkout@v3
+      uses: actions/checkout@v3
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
       with:
