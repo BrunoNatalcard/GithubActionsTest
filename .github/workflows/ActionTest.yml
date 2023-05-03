@@ -27,7 +27,7 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Check folder for files
       run: |
-        if ls -q /path/to/folder/ | grep -v -e '\.txt$'; then
+        if ls -q ./Respostas/ | grep -v -e '\.txt$'; then
           echo "Files found"
         else
           echo "No files found"
