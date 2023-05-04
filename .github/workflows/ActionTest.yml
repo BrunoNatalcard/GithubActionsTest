@@ -22,12 +22,15 @@ jobs:
         python -m pip install --upgrade pip
         pip install argparse python-math
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-  check_files:
-    runs-on: ubuntu-latest
-    steps:
     - name: Check folder for files
       run: |
-        ls ${{ github.workspace }}
+        if ls -q ./Respostas/ | grep -v -e '\.txt$'; then
+          echo "Files found"
+        else
+          echo "No files found"
+          exit 1
+        fi
+      
         
       
       
