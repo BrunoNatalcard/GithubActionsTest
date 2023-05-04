@@ -37,7 +37,7 @@ jobs:
         pip install argparse python-math pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi   
     - name: Run tests
-      run: python Respostas/resposta2.py -p seis
+      run: python Respostas/resposta1.py -p seis
       
       
     
