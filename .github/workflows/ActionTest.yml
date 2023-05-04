@@ -27,6 +27,7 @@ jobs:
     steps:
     - name: Check folder for files
       run: |
+        cd ${{ github.workspace }}
         if ls -q ./Respostas/ | grep -v -e '\.txt$'; then
           echo "Files found"
         else
